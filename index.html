@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Schedule</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
@@ -15,7 +15,7 @@
     
     <div class="container">
 
-        <div class="jumbotron col-lg-12 text-center" style="background-color:rgb(0, 30, 89); color:white;">
+        <div class="jumbotron col-lg-12 text-center" >
           <h1>Train Schedule Data</h1>
         </div>
     
@@ -24,22 +24,22 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="panel panel-default">
-              <div class="panel-heading" style="background-color: rgb(0, 30, 89); color: white;">
-                <h3 class="panel-title">Add Employee</h3>
+              <div class="panel-heading" >
+                <h3 class="panel-title">Add Train</h3>
               </div>
               <form>
                 <div class="form-group">
-                  <label>Employee Name</label>
-                  <input id="ee-name" type="name" class="form-control">
-                  <label>Role</label>
-                  <input id="ee-role" type="name" class="form-control">
-                  <label>Start Date (MM/DD/YYYY)</label>
-                  <input id="start-date" type="name" class="form-control">
-                  <label>Monthly Rate</label>
-                  <input id="ee-rate" type="name" class="form-control">
+                  <label>Train Name</label>
+                  <input id="input-name" type="name" class="form-control">
+                  <label>Destination</label>
+                  <input id="input-dest" type="name" class="form-control">
+                  <label>Frequency (min)</label>
+                  <input id="input-freq" type="name" class="form-control">
+                  <label>First Train Time(HH:mm - military time)</label>
+                  <input id="input-start" type="name" class="form-control">
                 </div>
               </form>
-              <button id="addEmployee" type="submit" class="btn btn-default" style="background-color:rgb(0, 30, 89); color:white;">Submit</button>
+              <button id="addTrain" type="submit" class="btn btn-default" >Submit</button>
             </div>
           </div>
         </div>
@@ -47,17 +47,16 @@
         <div class="row">
             <div class="col-lg-12">
               <div class="panel panel-default">
-                <div class="panel-heading" style="background-color:rgb(0, 30, 89); color: white;">
-                  <h3 class="panel-title">Current Employees</h3>
+                <div class="panel-heading">
+                  <h3 class="panel-title">Train Schedule</h3>
                 </div>
                 <table class="table" id="data-table">
                   <tr class="headers">
-                    <th>Employee Name</th>
-                    <th>Role</th>
-                    <th>Start Date</th>
-                    <th>Months Worked</th>
-                    <th>Monthly Rate ($)</th>
-                    <th>Total Billed ($)</th>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
                   </tr>
                   
                 </table>
@@ -68,6 +67,6 @@
       </div>
 
 
-    <script type="text/javascript" src="assets/javascript/script.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
